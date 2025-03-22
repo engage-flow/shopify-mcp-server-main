@@ -1,0 +1,11 @@
+gcloud artifacts repositories create shopify-mcp-server \
+  --repository-format=docker \
+  --location=asia-south1 \
+  --description="Shopify MCP Server images"
+
+
+gcloud run deploy shopify-mcp-server \
+  --image=asia-south1-docker.pkg.dev/shopify-mcp-server/shopify-mcp-server/app:v1 \
+  --platform=managed \
+  --region=asia-south1 \
+  --allow-unauthenticated
