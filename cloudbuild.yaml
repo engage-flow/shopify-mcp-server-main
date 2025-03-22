@@ -28,3 +28,5 @@ steps:
     # - '--set-secrets=SHOPIFY_ACCESS_TOKEN=shopify-access-token:latest,MYSHOPIFY_DOMAIN=shopify-domain:latest'
 images:
   - "asia-south1-docker.pkg.dev/$PROJECT_ID/shopify-mcp-server/app:$COMMIT_SHA"
+options:
+  logging: CLOUD_LOGGING_ONLY
